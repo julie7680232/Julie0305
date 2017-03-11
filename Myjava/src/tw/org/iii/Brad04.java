@@ -3,7 +3,10 @@ package tw.org.iii;
 public class Brad04 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+		int a = 10,b =3;
+		if(--a >= 10 &)
+		
 
 		
 		
