@@ -1,0 +1,26 @@
+package tw.org.iii;
+
+public class Brad11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int result;
+		for(int k=0; k<2; k++){
+			for(int j=1; j<=9; j++){
+				for(int i=2; i<=5; i++){
+					int newi = i + k * 4;
+					result = newi * j;
+					System.out.print(newi +" X " + j + " = "+result+"\t");	
+				}
+				System.out.println();
+			}
+			System.out.println("----------------------------------------------------------");
+		}
+		
+		
+		
+		
+	}
+
+}
