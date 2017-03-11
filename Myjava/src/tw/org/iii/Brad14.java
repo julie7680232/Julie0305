@@ -13,7 +13,7 @@ public class Brad14 {
 	//	System.out.println("--------------------------------------------------------");
 		
 		int p1,p2,p3,p4,p5,p6;
-		p1=p2=p3=p4=p5=p5=p6=0;
+		p1=p2=p3=p4=p5=p6=0;
 		for(int i=0; i<10; i++){
 			int dice = (int)(Math.random()*6+1);  //1-6
 			switch(dice){
