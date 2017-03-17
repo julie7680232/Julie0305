@@ -5,12 +5,12 @@ public class Brad14 {
 	public static void main(String[] args) {
 		
 		
-	//	for(int i=1; i<=10; i++){
-	//		int dice = (int)(Math.random()*6+1);
+		for(int i=1; i<=10; i++){
+			int dice = (int)(Math.random()*6+1);
 			System.out.println(dice);
-	//	}
+		}
 		
-	//	System.out.println("--------------------------------------------------------");
+		System.out.println("--------------------------------------------------------");
 		
 		int p1,p2,p3,p4,p5,p6;
 		p1=p2=p3=p4=p5=p6=0;

@@ -25,7 +25,7 @@ public class Brad12 {
 			for(int j=9; j>0; j--){
 				System.out.println(i+":"+j);
 				if (j%5==0)  break Julie;   //中斷至哪個地方(Julie之迴圈)     若break變continue
-				continue;                  //因為System.out.println("OK");永遠執行不到,故執行編藝會錯誤
+				//continue;                  //因為System.out.println("OK");永遠執行不到,故執行編譯會錯誤
 				System.out.println("OK");
 			}
 		}

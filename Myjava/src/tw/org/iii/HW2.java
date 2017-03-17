@@ -3,32 +3,37 @@ package tw.org.iii;
 public class HW2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		int i,j,k;
-		for(i=1;i<=100;i++){ 
-			for(j=1;j<=50;j++){
-				k = i % j ;
+		int i,j,k,g;
 		
-				if(k == 0){
-					Systetem.out,println("獶借计");
-				}else{
-					Systetem.out,println("借计");
-				}
-				}
+		for(i=2;i<=100;i++){ 
+			Julie:
+			for(j=2;j<i;j++){
 				
+				k = i % j;
+
+				if(k == 0){
+				//System.out.println("i = "+ i + " , j = " + j + " ; " + i + "獶借计");
+				break Julie;
+				}
+				else{
+					continue Julie;	
+					
+					g=i-j;
+					
+					if(g == 1){
+						if(k == 0){
+							System.out.println("i = "+ i + " , j = " + j + " ; " + i + "獶借计");
+						}else{
+							System.out.println("i = "+ i + " , j = " + j + " ; " + i + "借计");
+						}
+							
+					}
+				}
 			}
-	
-		
 		}
 
-		
-		
-		
-		
-
-		
-		
+	
 		
 		
 		
