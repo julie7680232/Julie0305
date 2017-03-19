@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad {
+public class Brad {//
 	int a;
 	static int b;                      //¬°ª«¥ó
 	{                      

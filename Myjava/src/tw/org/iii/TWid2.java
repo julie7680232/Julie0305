@@ -1,7 +1,7 @@
 package tw.org.iii;
 
 public class TWid2 {   
-	private String id;  //需不需要被封裝,是否可被更改
+	private String id;  //需不需要被封裝,是否可被更改//
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 	TWid(){
 		this ((int)(math.random()*2==0);  //不能再加入super,因為建構句第一道敘述句super與this只能選一個

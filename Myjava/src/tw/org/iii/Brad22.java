@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad22 {
+public class Brad22 {//
 
 	public static void main(String[] args) {
 		int a = 1; int sum = 0;

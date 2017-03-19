@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad12 {
+public class Brad12 {//
 
 	public static void main(String[] args) {
 		for(int i=1,j=10; i<10; i++,j--){

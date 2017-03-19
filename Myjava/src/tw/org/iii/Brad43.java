@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad43 {
+public class Brad43 {//
 
 	public static void main(String[] args) {
 		String s1 = "Brad";
@@ -14,7 +14,7 @@ public class Brad43 {
 		System.out.println(s3);                    //但原字串不變
 		System.out.println(s3.replace('a', 'A'));   //置換字串內容,但是是產生新的物件字串,不是直接原字串替換掉,是產生新的位址
 		System.out.println(s3);                   //但原字串不變
-
+//
 	}
 
 }

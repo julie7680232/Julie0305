@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad33 {
+public class Brad33 {//
 
 	public static void main(String[] args) {
 		String id = "B123456789"; 

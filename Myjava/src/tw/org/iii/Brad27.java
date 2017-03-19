@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 /*
  * Program: Guess Number game
  */
-public class Brad27 {
+public class Brad27 {//
 
 	public static void main(String[] args) {
 		// 1. Create Answer

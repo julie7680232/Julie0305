@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad19 {
+public class Brad19 {//
 
 	public static void main(String[] args) {
 		int [][] a;

@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad44 {
+public class Brad44 {//
 
 	public static void main(String[] args) {
 		StringBuffer sb1 = new StringBuffer();
@@ -9,7 +9,7 @@ public class Brad44 {
 		System.out.println(sb1.capacity());
 		System.out.println(sb1.length());
 		System.out.println(sb1 == sb2);  //true
-
+//
 	}
 
 }

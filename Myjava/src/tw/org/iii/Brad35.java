@@ -5,7 +5,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class Brad35 extends JFrame{  // teacher Brad24
+public class Brad35 extends JFrame{  // teacher Brad24//
 	private JButton open,save,exit;//,brad;
 	private MyPainter myPainter;
     

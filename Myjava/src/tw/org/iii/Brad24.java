@@ -2,7 +2,7 @@ package tw.org.iii;
 /*
  * P
  */
-public class Brad24 {
+public class Brad24 {//
 
 	public static void main(String[] args) {
 		String s1 = new String();

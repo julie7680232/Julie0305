@@ -2,7 +2,7 @@ package tw.org.iii;
 import javax.swing.JOptionPane;
 public class Brad26 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//
 	
 			//1.Create Answer
 			String answer = createAnswer(3);

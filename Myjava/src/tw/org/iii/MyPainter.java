@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 public class MyPainter extends JPanel implements MouseListener{
 	private  int x0,y0,x1,y1,x,y,w,h;
-	public MyPainter(){
+	public MyPainter(){ //
 		setBackground(Color.yellow);
 		addMouseListener(this);
 		x0 = y0 = x1 = y1 = -1;

@@ -7,7 +7,7 @@ package tw.org.iii;
  * 
  */
 
-public class Brad21 {
+public class Brad21 {//
 
 	public static void main(String[] args) {
 		int[] a ={0,1,2,3,4,5};

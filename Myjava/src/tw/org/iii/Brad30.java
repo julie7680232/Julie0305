@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad30 {
+public class Brad30 {//
 
 	public static void main(String[] args) {
 		System.out.println(Math.PI);
