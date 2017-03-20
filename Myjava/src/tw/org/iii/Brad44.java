@@ -9,7 +9,7 @@ public class Brad44 {
 		System.out.println(sb1.capacity());
 		System.out.println(sb1.length());
 		System.out.println(sb1 == sb2);  //true
-//
+
 	}
 
 }

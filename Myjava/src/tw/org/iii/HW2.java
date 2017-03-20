@@ -1,44 +1,26 @@
 package tw.org.iii;
 
 public class HW2 {
-
 	public static void main(String[] args) {
-		
-		int i,j,k,g;
-		
-		for(i=2;i<=100;i++){ 
-			Julie:
-			for(j=2;j<i;j++){
-				
-				k = i % j;
-
-				if(k == 0){
-				//System.out.println("i = "+ i + " , j = " + j + " ; " + i + "非質數");
-				break Julie;
-				}
-				else{
-					continue Julie;	
-					
-					g=i-j;
-					
-					if(g == 1){
-						if(k == 0){
-							System.out.println("i = "+ i + " , j = " + j + " ; " + i + "非質數");
-						}else{
-							System.out.println("i = "+ i + " , j = " + j + " ; " + i + "質數");
-						}
-							
+		int i,j;
+		System.out.println( "1~100質數規則:若為質數標記#,非質數不標記");
+		for(i=1;i<=100;i++){ 
+			int k=0;
+			for(j=1;j<=i;j++){
+				if( i % j == 0){
+					k++;
 					}
-				}
 			}
+			if(k==2){
+				System.out.print( i+"#\t");
+				}
+			else{
+				System.out.print( i+"\t");
+				}
+			if(i%10==0){
+				System.out.println();
+				}
+		
 		}
-
-	
-		
-		
-		
-		
-
 	}
-
 }

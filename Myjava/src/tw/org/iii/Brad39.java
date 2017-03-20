@@ -26,5 +26,5 @@ abstract class Brad274 extends Brad271{
 }
 
 abstract class Brad275{
-	void m1{};       //可以有一個抽象類別,不一定要有抽象方法
+	void m1(){};       //可以有一個抽象類別,不一定要有抽象方法
 }
