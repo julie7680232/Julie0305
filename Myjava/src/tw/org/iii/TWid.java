@@ -1,7 +1,7 @@
 package tw.org.iii;
 
 public class TWid {   
-	private String id;  //需不需要被封裝,是否可被更改//
+	private String id;  //需不需要被封裝,是否可被更改
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 	TWid(String id){
 		this.id = id;        //前面this是private String 之id       //或TWID(String myid){id = myid;}

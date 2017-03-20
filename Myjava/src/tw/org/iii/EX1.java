@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class EX1 {//
+public class EX1 {
 
 		public static void main(String[] args) {
 			print();

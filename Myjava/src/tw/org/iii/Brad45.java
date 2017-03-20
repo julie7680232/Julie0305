@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad45 {//
+public class Brad45 {
 
 	public static void main(String[] args) {
 		Brad421 b1 = new Brad422(); 

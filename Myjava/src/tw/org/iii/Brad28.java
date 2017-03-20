@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad28 {//
+public class Brad28 {
 
 	public static void main(String[] args) {
 		String a = new String("abc");    //因為是new 物件,故不是相同位址

@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-import javax.swing.JOptionPane;//
+import javax.swing.JOptionPane;
 
 /*
  * Program: Guess Number game

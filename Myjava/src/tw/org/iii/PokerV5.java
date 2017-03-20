@@ -2,7 +2,7 @@ package tw.org.iii;
 
 import java.util.Arrays;
 
-public class PokerV5 {//
+public class PokerV5 {
 
 	public static void main(String[] args) {
 		// ¬~µP

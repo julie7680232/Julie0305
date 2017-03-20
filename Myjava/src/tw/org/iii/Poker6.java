@@ -3,7 +3,7 @@ package tw.org.iii;
 import java.util.Collections;
 import java.util.LinkedList;
 
-public class Poker6 {//
+public class Poker6 {
 
 	public static void main(String[] args) {
 		LinkedList<Integer> poker = new LinkedList<>();

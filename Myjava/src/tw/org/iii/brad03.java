@@ -2,7 +2,7 @@ package tw.org.iii;
 
 import javax.swing.JOptionPane;
 
-public class brad03 {//
+public class brad03 {
 	public static void main(String[] args) {
 	String input = 
 			JOptionPane.showInputDialog("¿é¤J¦~¤À"); 

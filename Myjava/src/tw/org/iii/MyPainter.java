@@ -9,7 +9,7 @@ import java.awt.MouseListener;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
-
+                         //fixed
 public class MyPainter extends JPanel implements MouseListener{
 	private  int x0,y0,x1,y1,x,y,w,h;
 	public MyPainter(){ //

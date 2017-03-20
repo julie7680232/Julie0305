@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad41 {//
+public class Brad41 {
 
 	public static void main(String[] args) {
 	}

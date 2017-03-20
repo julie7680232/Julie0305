@@ -1,5 +1,5 @@
 package tw.org.iii;
-public class Brad37 {//
+public class Brad37 {
 	public static void main(String[] args) {
 		Brad253.m1();
 		//Brad253 b1 = new Brad253();  //°õ¦æ¤§¶¶§Ç1.=>2.=>3.=>4.=>5.

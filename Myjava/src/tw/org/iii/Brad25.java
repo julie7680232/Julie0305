@@ -1,6 +1,6 @@
 package tw.org.iii;
 import javax.swing.JOptionPane;
-public class Brad25 {//
+public class Brad25 {
 	//method:create a answer
 	static String createAnswer(int d){
 		//¬~µP

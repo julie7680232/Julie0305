@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad44 {//
+public class Brad44 {
 
 	public static void main(String[] args) {
 		StringBuffer sb1 = new StringBuffer();

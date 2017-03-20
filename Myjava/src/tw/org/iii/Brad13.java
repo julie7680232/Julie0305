@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad13 {//
+public class Brad13 {
 
 	public static void main(String[] args) {
 		int [] a;    //«Å§i¾ã¼Æ°}¦C     float,boolean,byte

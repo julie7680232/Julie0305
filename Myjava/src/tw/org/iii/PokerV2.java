@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class PokerV2 {//
+public class PokerV2 {
 
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();

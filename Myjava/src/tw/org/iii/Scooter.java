@@ -2,7 +2,7 @@ package tw.org.iii;
 
 public class Scooter extends Bike{  //Bike為Scooter之爸爸
        //沒有定義建構式,編譯時期,系統直接拿其副類別,拿爸爸的建構式為無船建構式         //Bike之爸爸為extends Object,沒有寫皆是Object
-	Scooter(){//
+	Scooter(){
 		//super();
 		System.out.println("Scooter()");
 	}

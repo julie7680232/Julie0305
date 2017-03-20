@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad20 {//
+public class Brad20 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

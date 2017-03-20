@@ -1,5 +1,5 @@
 package tw.org.iii;
-public class Brad36 {//
+public class Brad36 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Brad253 b1 = new Brad253();  //°õ¦æ¤§¶¶§Ç1.=>2.=>3.=>4.=>5.

@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Bike extends Object{//
+public class Bike extends Object{
 	double speed;  //存取修飾字,封裝速度,不能自己擅自制定
 	int a;           //a = 0 ，物件屬性
 	static int b,counter;   //b = 0 

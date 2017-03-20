@@ -1,5 +1,5 @@
 package tw.org.iii;
-public class Brad38 {//
+public class Brad38 {
 	public static void main(String[] args) {
 		Brad261 b1 = new Brad261();
 		Brad261 b2 = new Brad262();   //b2¤´¬°Brad261

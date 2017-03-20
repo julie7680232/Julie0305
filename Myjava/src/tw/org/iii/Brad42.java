@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class Brad42 {//
+public class Brad42 {
 
 	public static void main(String[] args) {
 		Shape s1 = new TriShape(3,4,5,4);

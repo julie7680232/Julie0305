@@ -1,6 +1,6 @@
 package tw.org.iii;
 
-public class TWId extends Object{
+public class TWId extends Object{  //teacher之程式,直接修改,class不同,故會編譯錯誤
 	private String id;
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
 	TWId(){
