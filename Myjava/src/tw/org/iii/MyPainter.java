@@ -32,14 +32,14 @@ public class MyPainter extends JPanel implements MouseListener{
 		g2d.setColor(Color.RED);
 		//g2d.setColor(Color.Blue);
 		//g2d.drawLine(0,0,200,200);
-		g2d.drawLine(x0,y0,x1,y1);
-		//g2d.drawOval(x, y, w, h);
+		//g2d.drawLine(x0,y0,x1,y1);
+		g2d.drawOval(x, y, w, h);
 		//System.out.println("paint");
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {  //MouseEvent指的是資訊在那邊;e代表的是事件
-		//System.out.println("Clicked"); 
+		System.out.println("Clicked"); 
 		//滑鼠在原地點一下再放開會出現Clicked,若先點一下移動再放開則不會出現
 		                            
 	}
@@ -59,17 +59,17 @@ public class MyPainter extends JPanel implements MouseListener{
 	public void mousePressed(MouseEvent e) {
 		//System.out.println("Presses" + e.getX() + "X" + e.getY() + "Y" );
 		//e為事件,e.getX()指的是執行程式按一下畫面時,會出現按的X及Y座標
-		x0 = e.getX(); y0 = e.getY();
+		x0 = e.getX(); y0 = e.getY();     //滑鼠在畫面中按第一下之座標
 		
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		x1 = e.getX(); y1 = e.getY();
-		//int r = Math.abs(x0-x1); 
-		//w = h = 2*r;
-		//x = x0 - r;
-		//y = y0 - r;
+		x1 = e.getX(); y1 = e.getY();     //滑鼠在畫面中按第一下之座標後,按住不放,直到A點放開,(x1,y1)此為A點座標
+		int r = Math.abs(x0-x1);           //得到橢圓形(或圓形)之半徑
+		w = h = 2*r;                       //橢圓形(或圓形)之寬高為2倍半徑
+		x = x0 - r;                        //得到半徑後,第一點之座標(x0,y0)扣掉半徑即為橢圓形(或圓形)之最左上角之座標(x,y)   
+		y = y0 - r;
 		//System.out.println("Released");
 		repaint();
 		
