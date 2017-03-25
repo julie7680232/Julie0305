@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 public class MyPainter5 extends JPanel { 
 	private  int x0,y0,x1,y1,x,y,w,h; 
 	public MyPainter5(){ 
-		setBackground(Color.Green);
+		setBackground(Color.GREEN);
 		addMouseListener(new MouseAdapter(){
 			@Override
 			public void mousePressed(MouseEvent e) {
