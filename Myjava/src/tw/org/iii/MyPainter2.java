@@ -12,10 +12,10 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JPanel;
                          //fixed
-public class MyPainter extends JPanel implements MouseListener{  //需要實作
+public class MyPainter2 extends JPanel implements MouseListener{  //需要實作
 	private  int x0,y0,x1,y1,x,y,w,h;
 	private MyMouseAdapter  myMouseAdapter; 
-	public MyPainter(){ //
+	public MyPainter2(){ //
 		setBackground(Color.yellow);
 		addMouseListener(this);  //委託我自己聽滑鼠
 		
@@ -88,8 +88,8 @@ public class MyPainter extends JPanel implements MouseListener{  //需要實作
 }
 
 class MyMouseAdapter extends MouseAdapter{
-	private MyPainter painter;
-	public MyMouseAdapter (MyPainter painter);
+	private MyPainter2 painter;
+	public MyMouseAdapter (MyPainter2 painter);
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
