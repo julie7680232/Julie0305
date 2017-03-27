@@ -1,44 +1,50 @@
 package tw.org.iii;
-
 import java.awt.BasicStroke;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.dnd.MouseDragGestureRecognizer;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-
 import javax.swing.JPanel;
-                         //fixed
-public class MyPainter2 extends JPanel implements MouseListener{  //需要實作
+                         
+public class MyPainter2 extends JPanel implements MouseListener{
 	private  int x0,y0,x1,y1,x,y,w,h;
-	private MyMouseAdapter  myMouseAdapter; 
-	public MyPainter2(){ //
+	private MyMouseAdapter myMouseAdapter;   //1.
+	public MyPainter2(){ 
 		setBackground(Color.yellow);
-		addMouseListener(this);  //委託我自己聽滑鼠
-		
-		
-		addMouseListener(new MyMouseAdapter());   //此列和上一列都可以聽
-		x0 = y0 = x1 = y1 = -100;  //為了避免畫面一開始出現一個紅色圓點
+		addMouseListener(this);                        //第一種方式聽
+		myMouseAdapter = new MyMouseAdapter(this);    //2.
+		addMouseListener(myMouseAdapter);       //3.
+		//addMouseListener(new MyMouseAdapter());        //第二種方式聽,有兩種方式都可以聽,此行可取代1.2.3.
+		x0 = y0 = x1 = y1 = -100;  
 	}
-	void  set//沒有傳回值set用void
-	int //需要傳回值,get用int
 	
-	
+	void setX0(int x0){this.x0=x0;}   //沒有傳回值set用void
+	void setY0(int y0){this.y0=y0;}
+	void setX1(int x1){this.x1=x1;}
+	void setY1(int y1){this.y1=y1;}
+	int getX0(){return x0;}         //需要傳回值,get用int
+	int getY0(){return y0;}
+	int getXX(){return x;}      
+	int getYY(){return y;}
+	int getWW(){return w;}        
+	int getHH(){return h;}
+	void setXX(int x){this.x=x;}
+	void setYY(int y){this.y=y;}
+	void setWW(int w){this.w=w;}
+	void setHH(int h){this.h=h;}
 	
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
 		Graphics2D g2d = (Graphics2D)g;  
-		//因為要尋找設定粗細的程式,g要把他打回原形(因為現在在javax.swing中),所以重新設定g,
-		//將原本的Graphics g 設定成Graphics2D  g2d,Graphics2D是認Graphics為父類別,
-		//重新設定一個參數g2d代替原本的g 
-		//像是我要車子,你給我法拉利,但我把法拉利打回原形,強制轉型變成車子
 		
-		g2d.setStroke(new BasicStroke(4));  //設定粗細為4
+		
+		g2d.setStroke(new BasicStroke(4));  
 		g2d.setColor(Color.RED);
 		//g2d.setColor(Color.Blue);
 		//g2d.drawLine(0,0,200,200);
@@ -48,68 +54,66 @@ public class MyPainter2 extends JPanel implements MouseListener{  //需要實作
 	}
 
 	@Override
-	public void mouseClicked(MouseEvent e) {  //MouseEvent指的是資訊在那邊;e代表的是事件
+	public void mouseClicked(MouseEvent e) {  
 		System.out.println("Clicked"); 
-		//滑鼠在原地點一下再放開會出現Clicked,若先點一下移動再放開則不會出現
-		                            
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		
-		
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		//System.out.println("Presses" + e.getX() + "X" + e.getY() + "Y" );
-		//e為事件,e.getX()指的是執行程式按一下畫面時,會出現按的X及Y座標
-		x0 = e.getX(); y0 = e.getY();     //滑鼠在畫面中按第一下之座標
-		
+		x0 = e.getX(); y0 = e.getY(); 
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		x1 = e.getX(); y1 = e.getY();     //滑鼠在畫面中按第一下之座標後,按住不放,直到A點放開,(x1,y1)此為A點座標
-		int r = Math.abs(x0-x1);           //得到橢圓形(或圓形)之半徑
-		w = h = 2*r;                       //橢圓形(或圓形)之寬高為2倍半徑
-		x = x0 - r;                        //得到半徑後,第一點之座標(x0,y0)扣掉半徑即為橢圓形(或圓形)之最左上角之座標(x,y)   
+		x1 = e.getX(); y1 = e.getY();     
+		int r = Math.abs(x0-x1);        
+		w = h = 2*r;                      
+		x = x0 - r;                       
 		y = y0 - r;
-		//System.out.println("Released");
 		repaint();
-		
 	}
-
 }
 
-class MyMouseAdapter extends MouseAdapter{
+class MyMouseAdapter extends MouseAdapter{   //為何要繼承,因為抽象類別,針對我所需要的實作,不需要像MyPainter每個方法都需要實作
 	private MyPainter2 painter;
-	public MyMouseAdapter (MyPainter2 painter);
+	public MyMouseAdapter(MyPainter2 painter2){            //和MyPainter2產生關係
+		this.painter = painter2;
+	}
+	
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
-
-		x0 = e.getX(); y0 = e.getY();     //滑鼠在畫面中按第一下之座標
-		
+		super.mousePressed(e);
+		painter.setX0(e.getX());
+		painter.setY0(e.getY());
+		//x0 = e.getX(); y0 = e.getY(); 
 	}
-
 	@Override
-	public void mouseReleased(MouseEvent e) {
-		super.mouseReleased(e);
-		int x1 = e.getX(); y1 = e.getY();     //滑鼠在畫面中按第一下之座標後,按住不放,直到A點放開,(x1,y1)此為A點座標
-		painter .setX1
-		int r = Math.abs(x0-x1);           //得到橢圓形(或圓形)之半徑
-		w = h = 2*r;                       //橢圓形(或圓形)之寬高為2倍半徑
-		x = x0 - r;                        //得到半徑後,第一點之座標(x0,y0)扣掉半徑即為橢圓形(或圓形)之最左上角之座標(x,y)   
-		y = y0 - r;
-		//System.out.println("Released");
-		repaint();
-		
-	}
-
+		public void mouseReleased(MouseEvent e) {
+			super.mouseReleased(e);
+			int x1 = e.getX(),y1 = e.getY();
+			painter.setX1(x1);
+			painter.setY1(y1);
+			//x1 = e.getX(); y1 = e.getY();    	 
+			int r = Math.abs(painter.getX0()-x1);        
+			painter.setWW(2*r);
+			painter.setHH(2*r);
+			//w = h = 2*r;      
+			painter.setXX(painter.getX0()-r);
+			painter.setYY(painter.getY0()-r);
+			//x = x0 - r;                       
+			//y = y0 - r;
+			painter.repaint();
+			
+		}
 }
+

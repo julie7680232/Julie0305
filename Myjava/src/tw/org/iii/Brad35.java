@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class Brad35 extends JFrame{  // teacher Brad24
 	private JButton open,save,exit;//,brad;
-	private MyPainter myPainter;  //可自行改MyPainter
+	private MyPainter3 myPainter;  //可自行改MyPainter
     
 	Brad35(){   //建構式:初始化
     	//super();
@@ -16,7 +16,7 @@ public class Brad35 extends JFrame{  // teacher Brad24
     	open = new JButton("Open");
     	save = new JButton("Save");
     	exit = new JButton("Exit");
-    	myPainter = new MyPainter();   //可自行改MyPainter
+    	myPainter = new MyPainter3();   //可自行改MyPainter
     	//brad = new JButton("brad");
     	//add(open,BorderLayout.NORTH);
     	//add(save,BorderLayout.WEST);
