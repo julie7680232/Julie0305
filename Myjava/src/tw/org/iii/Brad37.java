@@ -1,27 +1,27 @@
 package tw.org.iii;
 public class Brad37 {
 	public static void main(String[] args) {
-		Brad253.m1();
-		//Brad253 b1 = new Brad253();  //執行之順序1.=>2.=>3.=>4.
-		//Brad253 b2 = new Brad253();
+		Brad373.m1();
+		//Brad373 b1 = new Brad373();  //執行之順序1.=>2.=>3.=>4.
+		//Brad373 b2 = new Brad373();
 	}
 }
-class Brad251{
+class Brad371{
 	static {System.out.println("s1");}               //1.
-	Brad251(){System.out.println("Brad251()");}
-	Brad251(int a){System.out.println("Brad251(int)");}   
+	Brad371(){System.out.println("Brad371()");}
+	Brad371(int a){System.out.println("Brad371(int)");}   
 }
-class Brad252 extends Brad251{    
+class Brad372 extends Brad371{    
 	static {System.out.println("s2");}                 //2.
-	Brad252(String a){   
-		System.out.println("Brad252(String)");
+	Brad372(String a){   
+		System.out.println("Brad372(String)");
 	}
 }
-class Brad253 extends Brad252{
+class Brad373 extends Brad372{
 	static {System.out.println("s3");}                //3.
-	Brad253(){
+	Brad373(){
 		super("brad");                   
-		System.out.println("Brad253()");    
+		System.out.println("Brad373()");    
 	}
 	static void m1(){System.out.println("m1()");}     //4.
 }

@@ -1,10 +1,9 @@
 package tw.org.iii;
 
 public class Brad42 {
-
 	public static void main(String[] args) {
-		Shape s1 = new TriShape(3,4,5,4);
-		Shape s2 = new SquShape(4);
+		TriShape s1 = new TriShape(3,4,5,4);
+		SquShape s2 = new SquShape(4);
 		m1(s2);
 		s1.isTriShape();
 	}
@@ -45,6 +44,5 @@ class SquShape implements Shape{
 		}
 	public double calArea(){
 		return s*s;
-		};
-	
+	}
 } 
