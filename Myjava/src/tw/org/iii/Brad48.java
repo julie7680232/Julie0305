@@ -20,7 +20,7 @@ class Bird{
 	private int leg;
 	//void setLeg(int n) throws MyException,MyException2{
 		
-	void setLeg(int n) throws Exception{  //可能丟多個throws//須於執行框內處理,使用try{} catch(){}
+	void setLeg(int n) throws Exception{  //宣告可能拋出多個例外//可能丟多個throws//須於執行框內處理,使用try{} catch(){}
 		if(n>2){
 			//leg = 2;  //東西做死,直接訂腳為2,此為預設值
 			throw new Exception2();  //拋出新的例外,拋一個例外,故沒以加上s   

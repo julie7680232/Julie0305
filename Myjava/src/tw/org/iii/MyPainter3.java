@@ -15,7 +15,7 @@ public class MyPainter3 extends JPanel implements MouseListener{
 	private MyMouseAdapter myMouseAdapter;   //1.
 	public MyPainter3(){ 
 		setBackground(Color.yellow);
-		addMouseListener(this);                        //²Ä¤@ºØ¤è¦¡Å¥
+		//addMouseListener(this);                        //²Ä¤@ºØ¤è¦¡Å¥
 		myMouseAdapter = new MyMouseAdapter(this);    //2.
 		addMouseListener(myMouseAdapter);       //3.
 		//addMouseListener(new MyMouseAdapter());        //²Ä¤GºØ¤è¦¡Å¥,¦³¨âºØ¤è¦¡³£¥i¥HÅ¥,¦¹¦æ¥i¨ú¥N1.2.3.
@@ -52,7 +52,15 @@ public class MyPainter3 extends JPanel implements MouseListener{
 		g2d.drawOval(x, y, w, h);
 		//System.out.println("paint");
 	}
-
+	void changeLine(int x1,int y1){
+		this.x1 = x1;this.y1 = y1;
+		int r = Math.abs(x0-this.x1);        
+		w = h = 2*r;                      
+		x = x0 - r;                       
+		y = y0 - r;
+		repaint();
+	}
+	
 	@Override
 	public void mouseClicked(MouseEvent e) {  
 		System.out.println("Clicked"); 
@@ -82,11 +90,11 @@ public class MyPainter3 extends JPanel implements MouseListener{
 		repaint();
 	}
 }
-
-class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»Ý­nªº¹ê§@,¤£»Ý­n¹³MyPainter¨C­Ó¤èªk³£»Ý­n¹ê§@
+//¬°¦ó°õ¦æ¨ä¥LMyPainter»Ý­n§â¦¹³¡¤À¥ý¤£°õ¦æ,¦]¬°MyMouseAdapter«Å§i¬°private,¤£¬Opublic  ,°£«D§ï¦¨MyMouseAdapter3
+/*class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»Ý­nªº¹ê§@,¤£»Ý­n¹³MyPainter¨C­Ó¤èªk³£»Ý­n¹ê§@
 	private MyPainter3 painter;
-	public MyMouseAdapter(MyPainter3 myPainter3){            //©MMyPainter2²£¥ÍÃö«Y
-		this.painter = myPainter3;
+	public MyMouseAdapter(MyPainter3 myPainter){            //©MMyPainter3²£¥ÍÃö«Y
+		this.painter = myPainter;
 	}
 	
 	
@@ -101,19 +109,8 @@ class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»
 		public void mouseReleased(MouseEvent e) {
 			super.mouseReleased(e);
 			int x1 = e.getX(),y1 = e.getY();
-			painter.setX1(x1);
-			painter.setY1(y1);
-			//x1 = e.getX(); y1 = e.getY();    	 
-			int r = Math.abs(painter.getX0()-x1);        
-			painter.setWW(2*r);
-			painter.setHH(2*r);
-			//w = h = 2*r;      
-			painter.setXX(painter.getX0()-r);
-			painter.setYY(painter.getY0()-r);
-			//x = x0 - r;                       
-			//y = y0 - r;
-			painter.repaint();
+			painter.changeLine(x1, y1);
 			
 		}
 }
-
+*/

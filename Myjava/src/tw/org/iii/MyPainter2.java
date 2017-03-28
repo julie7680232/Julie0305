@@ -82,11 +82,11 @@ public class MyPainter2 extends JPanel implements MouseListener{
 		repaint();
 	}
 }
-
-class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»Ý­nªº¹ê§@,¤£»Ý­n¹³MyPainter¨C­Ó¤èªk³£»Ý­n¹ê§@
+//¬°¦ó°õ¦æ¨ä¥LMyPainter»Ý­n§â¦¹³¡¤À¥ý¤£°õ¦æ,¦]¬°MyMouseAdapter«Å§i¬°private,¤£¬Opublic ,°£«D§ï¦¨MyMouseAdapter2
+/*class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»Ý­nªº¹ê§@,¤£»Ý­n¹³MyPainter¨C­Ó¤èªk³£»Ý­n¹ê§@
 	private MyPainter2 painter;
-	public MyMouseAdapter(MyPainter2 painter2){            //©MMyPainter2²£¥ÍÃö«Y
-		this.painter = painter2;
+	public MyMouseAdapter(MyPainter2 mypainter){            //©MMyPainter2²£¥ÍÃö«Y
+		this.painter = mypainter;
 	}
 	
 	
@@ -116,4 +116,4 @@ class MyMouseAdapter extends MouseAdapter{   //¬°¦ó­nÄ~©Ó,¦]¬°©â¶HÃþ§O,°w¹ï§Ú©Ò»
 			
 		}
 }
-
+*/
