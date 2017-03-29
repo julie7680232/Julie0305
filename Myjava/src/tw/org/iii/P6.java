@@ -10,7 +10,7 @@ public class P6 {
 	            if (x == 4)
 	                break;
 	            if (x == 6)
-	                break z;
+	                break z;   //此例無法編譯,因為z之定義錯誤
 	            o = o + x;
 	        }
 	        System.out.println(o);
