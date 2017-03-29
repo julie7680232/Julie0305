@@ -1,9 +1,9 @@
 package tw.org.iii;
 
-public class HW3 {
+public class HW3$1 {
 	
 	public static void main(String[] args) {
-		int[] a ={0,1,2,3,4,5};
+		
 	/*	a[0]=0;
 		a[1]=1;
 		a[2]=2;
@@ -35,25 +35,27 @@ public class HW3 {
 		a[4] = a[0];
 		a[0] = temp5;
 	*/	
-		boolean[] check = new boolean[6];  //0-5:false
+		int[] a ={0,1,2,3,4,5};
+		boolean[] check = new boolean[6];
+		int temp1;
+		int[] b= new int[6];
 		for(int i=0;i<6;i++){
-			for(int j=5; j>=0 ; j--){
-			a[i] = i;
-			int temp1,b;
-			do{
-				temp1 = (int)(Math.random()*6);
-				System.out.println("temp1=" + temp1);
-			}while(check[temp1] == false); 
-			b = temp1;
-			check[temp1] = true;
-			
-			int temp2 = b;
-			a[b] = a[j];
-			a[j] =temp2;
-			}
+			temp1 = (int)(Math.random()*6);
+				if(check[temp1]){
+				   i--;            //代表重複了
+				}else{
+					b[i] = temp1;
+					check[temp1] = true;
+					//System.out.println("i=" + i + ";temp1=" + temp1 + ";b=" + b); 
+					}
+				int temp2 = b[i];
+				System.out.println("temp2=" + temp2); 
+					for(int j=5; j>=0 ; j--){
+						a[b[i]] = a[j];
+						a[j] = temp2;
+				}
 		}
-		//for (int v: a){
-		//	System.out.println(v);  
-		//}
+		
+		
 	}
 }
