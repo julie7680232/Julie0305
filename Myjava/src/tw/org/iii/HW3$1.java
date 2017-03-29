@@ -46,16 +46,18 @@ public class HW3$1 {
 				}else{
 					b[i] = temp1;
 					check[temp1] = true;
-					//System.out.println("i=" + i + ";temp1=" + temp1 + ";b=" + b); 
+					System.out.println(b[i]);
 					}
-				int temp2 = b[i];
-				System.out.println("temp2=" + temp2); 
-					for(int j=5; j>=0 ; j--){
-						a[b[i]] = a[j];
-						a[j] = temp2;
-				}
+				
 		}
-		
+		/*
+		int temp2 = b[i];
+		System.out.println("temp2=" + temp2); 
+			for(int j=5; j>=0 ; j--){
+				a[b[i]] = a[j];
+				a[j] = temp2;
+		}
+		*/
 		
 	}
 }
