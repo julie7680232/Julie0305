@@ -30,11 +30,11 @@ public class Brad21 {
 			System.out.println(v);  
 		}
 		System.out.println("----------------------------------------------------");
-		
+		//for-each 二維陣列
 		int[][]b = {{1,2,3,4},{5,6,7},{8,9},{10},{11,12,13}};
 		//method 1:
-		for (int i=0; i<b.length; i++){   //第二種方法玩不到i
-			for(int j=0; j<b[i].length;j++){
+		for (int i=0; i<b.length; i++){   //第一維度     ;第二種方法玩不到i
+			for(int j=0; j<b[i].length;j++){    //第二維度
 				System.out.print(b[i][j]+"  ");	
 				}
 			System.out.println( );
@@ -42,9 +42,9 @@ public class Brad21 {
 		System.out.println("----------------------------------------------------");
 		
 		//method 2:
-		for (int[] v1:b){
-			for(int v2 : v1){
-				System.out.print(v2+"  ");
+		for (int[] v1:b){    //尋訪一維維度
+			for(int v2 : v1){      //尋訪二維維度
+				System.out.print(v2+"  ");      
 			}
 			System.out.println();
 		}

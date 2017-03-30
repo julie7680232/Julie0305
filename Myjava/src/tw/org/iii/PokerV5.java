@@ -1,5 +1,5 @@
 package tw.org.iii;
-//已完成洗牌,現在說明發牌
+//已完成洗牌,現在說明發牌及攤牌(為標示成撲克牌之樣式:有花色及其數字)
 public class PokerV5 {
 
 	public static void main(String[] args) {
@@ -25,30 +25,25 @@ public class PokerV5 {
 		
 		//發牌 = >四個玩家 => 每家有13張
 		int[][] player = new int[4][13];
-		for(int i=0; i<poker.length; i++){
-			player[i%4][i/4] = poker[i];
+		for(int i=0; i<poker.length; i++){ 
+			player[i%4][i/4] = poker[i];     //i%4指輪流發給四個玩家,i/4指每人第幾輪發的牌
 		}
 		System.out.println("---------------------------");
-		//驗算第一家
-		for (int v :player[0]){
-			System.out.println(v);
+		//驗算第一家發的牌
+		for (int v :player[0]){            
+			System.out.println(v);   
 		}
 		System.out.println("---------------------------");
-		//驗算第二家
+		//驗算第二家發的牌
 		for (int v :player[1]){
-			System.out.println(v);
-		//攤牌
-		for(int[] cards:player){
-			for(int card : cards){
-				System.out.print(card + "  ");
+			System.out.println(v);	
+		}
+		//攤牌,將4個玩家發到的牌分別依序印出來
+		for(int[] cards:player){   //尋訪玩家,玩家為一維陣列,每個玩家都有很多張牌(13張牌),因此card加上s
+			for(int card : cards){       //每一張牌會從很多張牌抽出來
+				System.out.print(card + "  ");  //印完第一位玩家後,換行印第二位玩家,其他玩家依序印出
 			}
 			System.out.println();
 		}
-		}
-	
-
 	}
-
-	
-
 }
