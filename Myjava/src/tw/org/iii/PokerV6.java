@@ -1,5 +1,5 @@
 package tw.org.iii;
-//已完成洗牌及發牌,現在說明攤牌花色及數字
+//已完成洗牌及發牌,現在說明攤牌花色及數字,理牌
 import java.util.Arrays;
 
 public class PokerV6 {
@@ -31,9 +31,10 @@ public class PokerV6 {
 				
 				for (int[] cards : player){
 					//理牌
-					Arrays.sort(cards);
+					Arrays.sort(cards);     //每位玩家的牌進行排序(理牌),API查詢,人家已寫完程式,直接呼叫使用
 					for (int card : cards){
-						System.out.print(suits[card/13] + values[card%13] + "  ");
+						System.out.print(suits[card/13] + values[card%13] + "  ");  
+						// card/13可得知四種花色,card%13可得知數字或A,J,Q,K(card為0-51)
 					}
 					System.out.println();
 				}
