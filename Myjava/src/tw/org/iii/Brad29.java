@@ -1,82 +1,27 @@
 package tw.org.iii;
-
-import javax.swing.JOptionPane;
-
-/*
- * Program: Guess Number game
- */
+//物件導向(Bike)
 public class Brad29 {
-	
+
 	public static void main(String[] args) {
-		// 1. Create Answer
-		String answer = createAnswer(3);
-		//System.out.println(answer);
-		
-		// 2. Start
-		boolean isWinner = false;
-		String hist = "";
-		for (int i=0; i<10; i++){
-			// 2-1. input a number string
-			String guess = JOptionPane.showInputDialog((i+1) + ". 猜一個數字\n" + hist);
-			
-			// 2-2. compare string => result
-			String result = checkAB(answer, guess);
-			hist += (i+1) + ". " + guess + ":" + result + "\n";
-			JOptionPane.showMessageDialog(null, result);
-			if (result.equals("3A0B")){
-				// 2-3. WINNER -> break
-				isWinner = true;
-				break;
-			}
-			// 2-4. repeat 10 times > LOSSER
-		}
-		
-		// 3. show ..... / .... 
-		if (isWinner){
-			JOptionPane.showMessageDialog(null, "恭喜老爺,賀喜夫人");
-		}else{
-			JOptionPane.showMessageDialog(null, "Losser, Answer is " + answer);
-		}
-	}
+		Bike1 b1 = new Bike1();    
+		//Brada b2 = new Brada();     //沒有宣告此class
+		Bike1 b2 = new Bike1();
+		System.out.println(b1);    //會印出tw.org.iii.Bike@15db9742,即它的IP位址
+		System.out.println(b2);    //會印出tw.org.iii.Bike@6d06d69c,即它的IP位址
+		                           //b1及b2不會相同,IP位址不同
+		//double julie;
+		//System.out.println(julie);  
+		//報錯原因:沒有初值,物件型別要new出來才可以,指肚子裡還有其他物件,但如果有new代表已經具體存在,已經有值,和陣列一樣,基本型別一定要有初值
+		System.out.println(b1.speed);  //執行後為0,0
+		b1.upSpeed();   //速度為1
+		b1.upSpeed();   //速度為1*1.2=1.2
+		b1.upSpeed();   //速度為1.2*1.2=1.44
+		b1.upSpeed();   //速度為1.44*1.2=1.728
+		b1.upSpeed = 10 ;
+		System.out.println(b1.speed);    
+		//若speed定義為private,第15,20,21列會編譯錯誤,除非裝一個碼表getSpeed(),並將第15,21列的b1.speed改成b1.getSpeed(),刪除第20列,即可編譯成功
 	
-	// method: checkAB(answer, guess) => ?A?B 
-	static String checkAB(String a, String g){
-		int A, B; A = B = 0;
-		for (int i=0; i<g.length(); i++){
-			if (g.charAt(i) == a.charAt(i)){
-				A++;
-			}else if(a.indexOf(g.charAt(i))!= -1){
-				B++;
-			}
-		}
-		return A + "A" + B + "B";
-	}
-	
-	
-	// method: create a answer
-	static String createAnswer(int d){
-		// 洗牌
-		boolean[] check = new boolean[10];	// 0 - 9: false
-		int[] poker = new int[d]; // 0-2: 0
-		int temp; int counter=0;
-		for (int i=0; i<poker.length; i++){
-			do{
-				temp = (int)(Math.random()*10);
-				counter++;
-			}while (check[temp]);
-			poker[i] = temp;
-			check[temp] = true;
-		}
-		String ret = "";
-		for(int v:poker) ret += v;
-		
-		return ret;
+
 	}
 
-	
-	
-	
-	
-	
-	
 }

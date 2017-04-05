@@ -1,12 +1,11 @@
 package tw.org.iii;
-//猜數字遊戲核心功能
+//猜數字遊戲除和新功能外,增加其他功能:1.猜了幾次 (第19列)2.回顧猜的內容(第17,20,24列)
 /*
  * Program: Guess Number game
  */
 import javax.swing.JOptionPane;
-public class Brad25 {
-	           
-
+public class Brad26 {
+	          
 	public static void main(String[] args) {
 		//1.Create Answer
 		String answer = createAnswer(3);   //建立static物件,並呼叫方法  d=3
@@ -14,11 +13,14 @@ public class Brad25 {
 
 		//2.Start
 		boolean isWinner = false;
+		String hist = "";
 		for(int i=0;i<10;i++){   //猜10次
 		//2-1. input a number string
-			String guess = JOptionPane.showInputDialog("猜一個數字");  //不需要變整數,因為是玩字串,不像閏年要變換成整數
+			String guess = JOptionPane.showInputDialog((i+1) + ". 猜一個數字\n" + hist);  //不需要變整數,因為是玩字串,不像閏年要變換成整數
+			//增加猜了幾次
 		//2-2. compare string => result
 			String result = checkAB(answer,guess);   //檢查A及B
+			hist += (i+1)+ "." + guess + ":" + result + "\n";  //定義hist,回顧猜的內容
 			JOptionPane.showMessageDialog(null, result);  //沒有parentComponent意指沒有父母是孤兒,所以用null
 		//2-3. WINNER -> break
 			if(result.equals("3A0B")){    //訂定布林值isWinner = false,若3A0B則isWinner為true,迴圈跳出
