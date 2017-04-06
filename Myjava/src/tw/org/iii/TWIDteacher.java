@@ -1,18 +1,18 @@
 package tw.org.iii;
 
-public class TWId extends Object{  //teacher之程式,直接修改,class不同,故會編譯錯誤
+public class TWIDteacher extends Object{  //teacher之程式,直接修改,class不同,故會編譯錯誤
 	private String id;
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
-	TWId(){
+	TWIDteacher(){
 		this((int)(Math.random()*2)==0);
 	}
-	TWId(boolean isFemale){
+	TWIDteacher(boolean isFemale){
 		this(isFemale, (int)(Math.random()*26));
 	}
-	TWId(int area){
+	TWIDteacher(int area){
 		this((int)(Math.random()*2)==0,area);
 	}
-	TWId(boolean isFemale, int area){
+	TWIDteacher(boolean isFemale, int area){
 		// super();
 		char f0 = letters.charAt(area);
 		char f1 = isFemale?'2':'1';
@@ -31,7 +31,7 @@ public class TWId extends Object{  //teacher之程式,直接修改,class不同,故會編譯錯
 		
 		
 	}
-	TWId(String id){
+	TWIDteacher(String id){
 		this.id = id;
 	}
 	// true => female; false => male

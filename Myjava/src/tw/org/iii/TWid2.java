@@ -3,16 +3,16 @@ package tw.org.iii;
 public class TWid2 {   
 	private String id;  //需不需要被封裝,是否可被更改
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
-	TWid(){
+	TWid2(){
 		this ((int)(math.random()*2==0);  //不能再加入super,因為建構句第一道敘述句super與this只能選一個
 	}
-	TWid(boolean isFemale){
+	TWid2(boolean isFemale){
 		this (isFemale,(int)(Math.random()*26));
 	}
-	TWid(int area){
+	TWid2(int area){
 		this ((int)(math.random()*2==0,area);
 		}
-	TWid(boolean isFemale,int area){
+	TWid2(boolean isFemale,int area){
 		//super();
 		char f0 = letters.charAt(area);
 		char f1 = isFemale?'2':'1';
@@ -66,21 +66,17 @@ public class TWid2 {
 		//other = >0-9
 		boolean result = true; 
 		if(id.length()!=10){ 
-			result false;
+			result = false;
 		}else{
-			if(letters.indexOf(id.charAt(0)) == -1) return flase;
+			if(letters.indexOf(id.charAt(0)) == -1) return false;
 			else{
 				                                           //Fixed
 			}
 		}
-		
 		return result;
 	}		
-			
-	
-	String getID(){
+
+	String getId(){
 		return id;
 	}
-	
-
 }

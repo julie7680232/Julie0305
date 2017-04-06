@@ -6,13 +6,13 @@ public class TWid {
 	TWid(String id){
 		this.id = id;        //前面this是private String 之id       //或TWID(String myid){id = myid;}
 	}
-	//true => female;flase => male
+	//true => female(女生);flase => male(男生)
 	boolean isFemale(){
 		char gender = id.charAt(1); //A123456789 =>1
 		return  gender == '2';
 	}
 			static boolean isCheckOk(String id){
-				if(!preCheck(id)) false;
+				if(!id.matches("^[A-Z][12][0-9]{8}$"))  return false;
 				
 				char f0 = id.charAt(0);
 				int n12 = letters.indexOf(f0) + 10;   //'Y'=>21+10=31
@@ -30,7 +30,6 @@ public class TWid {
 				int sum = n1*1+n2*9+n3*8+n4*7+n5*6+n6*5+n7*4+n8*3+n9*2+n10*1+n11*1;
 				return sum % 10 == 0;
 				//System.out.println(n3);
-				
 			}
 			
 	static boolean preCheck(String id){
@@ -40,21 +39,17 @@ public class TWid {
 		//other = >0-9
 		boolean result = true; 
 		if(id.length()!=10){ 
-			result false;
+			result = false;
 		}else{
-			if(letters.indexOf(id.charAt(0)) == -1) return flase;
+			if(letters.indexOf(id.charAt(0)) == -1) return false;
 			else{
 				                                           //Fixed
 			}
 		}
-		
 		return result;
 	}		
-			
 	
-	String getID(){
+	String getId(){
 		return id;
 	}
-	
-
 }
