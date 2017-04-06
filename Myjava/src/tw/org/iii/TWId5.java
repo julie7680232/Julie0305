@@ -1,6 +1,5 @@
 package tw.org.iii;
 //將身分證字號用正規表示法表達
-
 public class TWId5 {
 	private String id; //屬性慣例用小寫,//需不需要被封裝,是否可被更改
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
@@ -43,10 +42,10 @@ public class TWId5 {
 //	// charAt(1) => 1, 2
 //	// other => 0 -9
 //	boolean result = true;
-//	if (id.length() != 10){
+//	if (id.length() != 10){    // length == 10
 //		result= false;
 //	}else {
-//		if (letters.indexOf(id.charAt(0)) == -1) return false;
+//		if (letters.indexOf(id.charAt(0)) == -1) return false;    // charAt(1) => 1, 2
 //	}
 //	
 //	return result;

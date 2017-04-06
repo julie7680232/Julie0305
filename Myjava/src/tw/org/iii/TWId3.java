@@ -1,5 +1,5 @@
 package tw.org.iii;
-
+//身分證字號核心功能
 public class TWId3 {
 	private String id; //屬性慣例用小寫,//需不需要被封裝,是否可被更改
 	TWId3(String id){  //建構式名稱與class相同 

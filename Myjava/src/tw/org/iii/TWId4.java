@@ -1,6 +1,5 @@
 package tw.org.iii;
 //增加身分證字號檢查機制:1.length == 10  2.charAt(1) => 1, 2  
-
 public class TWId4 {
 	private String id; //屬性慣例用小寫,//需不需要被封裝,是否可被更改
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
@@ -43,10 +42,10 @@ public class TWId4 {
 	// charAt(1) => 1, 2
 	// other => 0 -9
 	boolean result = true;
-	if (id.length() != 10){
+	if (id.length() != 10){    // length == 10
 		result= false;
 	}else {
-		if (letters.indexOf(id.charAt(0)) == -1) return false;
+		if (letters.indexOf(id.charAt(0)) == -1) return false;   // charAt(1) => 1, 2
 	}
 	
 	return result;

@@ -1,9 +1,49 @@
 package tw.org.iii;
-//將身分證字號用正規表示法表達
-
+//物件導向:增加新建構式(建構的參數列.個數及型別都不同),剛剛TWId3~5是user指定的字串當作身分證字號,現在使用身分證字號產生器
+//身分證字號產生器:1.完全隨機 2.指定男生.女生 3.指定地區  4.指定男生.女生及地區
 public class TWId6 {
 	private String id; //屬性慣例用小寫,//需不需要被封裝,是否可被更改
 	static String letters = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
+	TWId6(){        //身分證字號產生器: 1.完全隨機
+		this((int)(Math.random()*2)==0);  //如果this(3);則會出現區域D//不能再加入super,因為建構句第一道敘述句super與this只能選一個
+//如果不寫this((int)(Math.random()*2)==0),可以改成第10~22列,但需要改第10~11列
+//		char f0 = letters.charAt(area);  //抽出字元,得出地區
+//		char f1 = isFemale?'2':'1';  //若為女生等於2,否則為1
+//		String temp = "" + f0 + f1;  //字串加其他型別為字串
+//		for(int i=0;i<7;i++){
+//			temp+=(int)(Math.random()*10);  //身分證字號:第0-8碼
+//			//物件裡面可以呼叫static,static不能呼叫物件
+//		}
+//		for(int i=0; i<10; i++){  //將i當作身分證字號第9碼
+//			if(isCheckOK(temp +i)){    //i須符合身分證字號檢查機制
+//				id = temp + i;
+//				break;
+//			}
+//		}
+	}
+	TWId6(boolean isFemale){    //身分證字號產生器: 2.指定男生.女生
+		this(isFemale,(int)(Math.random()*26));  //指定女生,區域有26個英文字母
+	}
+	TWId6(int area){      //身分證字號產生器: 3.指定地區 
+		this((int)(Math.random()*2)==0,area);    //男女生不指定,指定地區
+		//this(true,area); =>true則表示為女生,不同區域,若改成random則男生.女生隨機選取
+	}
+	TWId6(boolean isFemale, int area){  // 身分證字號產生器: 4.指定男生.女生及地區
+		char f0 = letters.charAt(area);  //抽出字元,得出地區
+		char f1 = isFemale?'2':'1';  //若為女生等於2,否則為1
+		String temp = "" + f0 + f1;  //字串加其他型別為字串
+		for(int i=0;i<7;i++){
+			temp+=(int)(Math.random()*10);  //身分證字號:第0-8碼
+			//物件裡面可以呼叫static,static不能呼叫物件
+		}
+		for(int i=0; i<10; i++){  //將i當作身分證字號第9碼
+			if(isCheckOK(temp +i)){    //i須符合身分證字號檢查機制
+				id = temp + i;
+				break;
+			}
+		}
+	}
+	
 	TWId6(String id){  //建構式名稱與class相同 
 		this.id = id;      
 		// 如果TWId3(String myid){id = myid;},將TWId3(String myid)改成TWId3(String id),
@@ -43,10 +83,10 @@ public class TWId6 {
 //	// charAt(1) => 1, 2
 //	// other => 0 -9
 //	boolean result = true;
-//	if (id.length() != 10){
-//		result= false;
+//	if (id.length() != 10){     // length == 10
+//		result= false; 
 //	}else {
-//		if (letters.indexOf(id.charAt(0)) == -1) return false;
+//		if (letters.indexOf(id.charAt(0)) == -1) return false;   // charAt(1) => 1, 2
 //	}
 //	
 //	return result;
