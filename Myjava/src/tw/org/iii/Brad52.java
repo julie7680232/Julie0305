@@ -12,9 +12,11 @@ public class Brad52 {
 		FileInputStream fin = new FileInputStream(file);  //API寫會拋出例外,所以使用try{}catch(){}
 		//int data = fin.read();   //只讀出檔案之第一文字a
 		byte[] buf = new byte[3];     //因為UTF8用3,若中文字前放a,問題還是存在
+		// 在 UTF-8 的編碼，一個中文 3 bytes;big5 一個中文算 2 byte, 不同的編碼，中文的長度不同
+
 		int len;                        
-		while ((len = fin.read(buf)) != -1 ){   
-			System.out.print(new String(buf));
+		while ((len = fin.read(buf)) != -1 ){     
+			System.out.print(new String(buf,0,len));   //字串可以讀char或byte
 		}
 		fin.close();
 	
