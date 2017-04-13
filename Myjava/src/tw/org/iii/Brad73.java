@@ -1,5 +1,5 @@
 package tw.org.iii;
-//網際網路TCP接收端(ServerSocket)-1:與Brad72對應,知道對方是否願意和我對話(3方交握)
+//網際網路TCP接收端(ServerSocket)-1:與Brad72對應,知道對方是否願意和我對話(3方交握),還沒傳送任何資料
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
