@@ -30,6 +30,7 @@ public class MySignPanel3 extends JPanel{
 		
 	}
 	//1. mouse event, 2. data structure, 3. draw
+	//猜數字遊戲:1.產生謎底 2.互動(1.產生對話框 2.比對  3.結果XXXX)
 	
 	@Override
 	protected void paintComponent(Graphics g) {   //畫圖

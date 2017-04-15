@@ -5,7 +5,6 @@ public class Brad81 {
 	}
 
 }
-
 interface Brad701{
 	public void m1();  //¹ï¥~«Å§i
 } 

@@ -36,10 +36,6 @@ public class Brad84 {
 		byte a = 13;  
 		set.add(a);  //byte => int => Integer ,轉型無法一次性,除非改成set.add((int)a)才可以
 		//set.add("78");  //因為TreeSet已宣告裡面只能放整數,故無法編譯
-		System.out.println(set);   //字串"78"無法排序,所以會拋出例外
-		
-
-		
+		System.out.println(set);   //字串"78"無法排序,所以會拋出例外	
 	}
-
 }
