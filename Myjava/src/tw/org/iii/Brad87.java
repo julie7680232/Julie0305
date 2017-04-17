@@ -18,13 +18,13 @@ public class Brad87 {
 		list1.add("B");
 		list1.add("C");
 		list1.add("B");
-		System.out.println(list1);
+		System.out.println(list1);  //印出[A,B,C,B]
 		list1.remove("B");
-		System.out.println(list1);  //砍掉第一個"B"
+		System.out.println(list1);  //砍掉第一個"B" ; 印出[A,C,B]
 		list1.remove("B");
-		System.out.println(list1);
+		System.out.println(list1);  //印出[A,C]
 		list1.remove("B");
-		System.out.println(list1);
+		System.out.println(list1);  //不會拋出例外,只是砍不到B,會印出[A,C]
 	}
 
 }

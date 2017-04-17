@@ -50,12 +50,6 @@ public class DigitalSign extends JFrame{
 			}
 		});
 		
-		
-		
-		
-		
-		
-		
 		setSize(640,480);//2
 		setVisible(true);//3
 		setDefaultCloseOperation(EXIT_ON_CLOSE);//4

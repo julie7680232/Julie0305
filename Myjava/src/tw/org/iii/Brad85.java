@@ -9,7 +9,7 @@ public class Brad85 {
 		set.add("1");
 		set.add("2");
 		set.add("12");
-		System.out.println(set);  //字串字元是排序判斷是一個字元一個字元判斷
+		System.out.println(set);  //字串字元是排序判斷是一個字元一個字元判斷,會印出[1,12,2]
 		
 		for(String obj:set){   //因為有泛型:定義字串=>TreeSet<String>
 			System.out.println(obj);

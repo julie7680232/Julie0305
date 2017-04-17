@@ -12,7 +12,7 @@ public class Brad86 {
 		set2.add(2);
 		set2.add(3);
 		set2.add(4);
-		set.addAll(set2);
+		set.addAll(set2);   //將set中的元素加上set2的元素
 		System.out.println(set); //set.size();第一層集合是兩個,為1及set2,但共4個元素
 
 	}
