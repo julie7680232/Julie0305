@@ -25,14 +25,14 @@ public class MySignPanel extends JPanel{
 		
 		
 	}
-	//1. mouse event, 2. data structure, 3. draw
+	//1. mouse event, 2. data structure(放在資料結構), 3. draw
 	
 	@Override
 	protected void paintComponent(Graphics g) {   //畫圖
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D)g; 
 		g2d.setColor(Color.BLUE);
-		g2d.setStroke(new BasicStroke(4));
+		g2d.setStroke(new BasicStroke(4));   //粗細設定
 		
 		
 		for(int i=1; i<line.size(); i++){
@@ -45,7 +45,7 @@ public class MySignPanel extends JPanel{
 		}
 	}
 	
-	private class MyMouseListener extends MouseAdapter{  //內部類別
+	private class MyMouseListener extends MouseAdapter{  //內部類別:方便存取外布類別的屬性和方法
 		@Override
 		public void mousePressed(MouseEvent e) {
 			super.mousePressed(e);

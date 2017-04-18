@@ -21,14 +21,14 @@ public class DigitalSign extends JFrame{
 		JPanel top = new JPanel(new FlowLayout());top.add(clear);top.add(undo);top.add(redo);
 		add(top,BorderLayout.NORTH);
 				
-		msp = new MySignPanel3();  //須修改名稱
+		msp = new MySignPanel3();  //增加一個畫布在視窗中央       //須修改名稱  
 		add(msp,BorderLayout.CENTER);
 		
 		clear.addActionListener(new ActionListener() {      //按下clear按鈕做以下事情,即新增clear功能
 			//按clear按鈕下去由誰聽到
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				msp.clear();
+				msp.clear();  //呼叫msp(即MySignPanel3)的clear方法
 			}
 		});
 		

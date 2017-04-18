@@ -25,7 +25,7 @@ public class MySignPanel3 extends JPanel{
 		addMouseMotionListener(listener);
 		
 		lines = new LinkedList<>();
-		recycle = new LinkedList<>();
+		recycle = new LinkedList<>();  //定義recycle物件
 		
 		
 	}
@@ -51,20 +51,20 @@ public class MySignPanel3 extends JPanel{
 		}
 	}
 
-	public void clear(){  
-		lines.clear();
+	public void clear(){   //宣告為public,因為要對外營業;此建立clear方法
+		lines.clear();     //清除所有畫面,只在記憶體清除,但畫面沒有處理,需增加repaint()來處理畫面                  
 		repaint();
 	}
 	public void undo(){
-		//lines.removeLast();
-		if(lines.size()>0){
-			recycle.add(lines.removeLast());    //你丟我檢,為了製作redo
+		//lines.removeLast();  //最後一條線拿掉,只在記憶體清除,但畫面沒有處理,需增加repaint()來處理畫面  
+		if(lines.size()>0){    //只是強化有線才會undo
+			recycle.add(lines.removeLast());    //前面有宣告recycle物件,你丟我檢,為了製作redo,將最後一條線回收到recycle之物件
 			repaint();
 		}
 	}
-	public void redo(){
-		if(recycle.size()>0){
-			lines.add(recycle.removeLast());     //畫一條新線,但資源回收桶還可以叫回舊線故增加第78列
+	public void redo(){ //移掉最後一條線,但沒有儲存,所以在undo內增加recycle.add(lines.removeLast())
+		if(recycle.size()>0){   //只是強化有線才會redo
+			lines.add(recycle.removeLast());     //畫一條新線,但資源回收桶還可以叫回舊線故增加第78列,將回收到recycle之物件回到原來的線上
 			repaint();
 		}
 	}
@@ -76,7 +76,7 @@ public class MySignPanel3 extends JPanel{
 		public void mousePressed(MouseEvent e) {
 			super.mousePressed(e);
 			//draw a new line
-			recycle.clear();
+			recycle.clear();  //畫新線後,將資源回收桶拿去倒掉
 		
 			LinkedList<HashMap<String,Integer>> line = new LinkedList<>();//(x0,y0)到(x1,y1)作一條線後,(x1,y1)為下一條新線的起點
 			

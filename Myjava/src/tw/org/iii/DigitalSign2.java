@@ -59,7 +59,8 @@ public class DigitalSign2 extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 			Color newColor = JColorChooser.showDialog(DigitalSign2.this, "Select a Color", Color.BLUE);	
-				
+			//API:showDialog(Component component, String title, Color initialColor)
+			//API:javax.swing => JColorChooser =>showDialog
 			}
 		});
 		
