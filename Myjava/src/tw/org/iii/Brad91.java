@@ -12,14 +12,14 @@ public class Brad91 {
 		tt2.start();
 		tt3.start();
 	}
-//class Thread1 extends Thread{  //只有extends Thread才是執行緒,在java中沒有第2招了
-//	@Override
-//	public void run() {
-//		for(int i=0; i<10;i++){
-//			System.out.println(i);
-//		}
-//	}
-//}
+class Thread1 extends Thread{  //只有extends Thread才是執行緒,在java中沒有第2招了
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		super.run();
+	}
+	}
+}
 class Thread2 implements Runnable{   //此彈性比Brad89還大,因為繼承只能繼承一個,Thread2只有實作,還沒有繼承
 	String name;
 	Thread2(String name){this.name = name;}
