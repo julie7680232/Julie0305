@@ -4,22 +4,24 @@ package tw.org.iii;
 public class Brad91 {
 
 	public static void main(String[] args) {
-		Thread2 t2 = new Thread2("A");  //t2不是執行緒
-		Thread tt2 = new Thread(t2);
+		Thread2 t2 = new Thread2("A");  //t2不是執行緒,t2只有runnable,有t2.run(),但沒有t2.start()
+		Thread tt2 = new Thread(t2);  //API:Thread(Runnable target),將t2放進去Thread(),tt2是執行緒,表現在t2
+		//可以用tt2.start()來表現出它的生命週期,tt2是執行緒,而其生命表現在Thread2的物件實體上
 		
 		Thread2 t3 = new Thread2("B");  //t3不是執行緒
 		Thread tt3 = new Thread(t3);
 		tt2.start();
 		tt3.start();
 	}
+}
 class Thread1 extends Thread{  //只有extends Thread才是執行緒,在java中沒有第2招了
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		super.run();
+		for(int i=0; i<10; i++){
+			System.out.println(i);
+		}
 	}
 	}
-}
 class Thread2 implements Runnable{   //此彈性比Brad89還大,因為繼承只能繼承一個,Thread2只有實作,還沒有繼承
 	String name;
 	Thread2(String name){this.name = name;}
@@ -35,5 +37,4 @@ class Thread2 implements Runnable{   //此彈性比Brad89還大,因為繼承只能繼承一個,T
 			}  
 		}
 	}
-}
 }

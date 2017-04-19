@@ -18,7 +18,8 @@ public class MyPool extends JPanel{
 	private LinkList<Ball> balls;
 	public MyPool(){
 		timer = new Timer();
-		balls new LinkedList<>();
+		timer.schedule(new ViewTask(), 0, 60);
+		balls = new LinkedList<>();
 		ball = new Ball(10,10);   //2.設定求在哪裡開始跑,設定10,10
 		//dx = dy = 10 ;  //每顆球都相同的dx,dy
 		//timer.schedule(ball, 1000, 60);
