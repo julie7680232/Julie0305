@@ -8,8 +8,8 @@ public class Brad94 {
 	public static void main(String[] args) {   
 		//static不能呼叫物件的東西,於private Timer timer;及private static class Mystop extends TimerTask 增加static
 		timer = new Timer();
-		timer.schedule(new MyTask1("A"), 1000 , 500);  //	schedule(TimerTask task, long delay, long period)
-		timer.schedule(new MyTask1("B"), 1800 , 300);
+		timer.schedule(new MyTask1("A"), 1000 , 500);   //schedule(TimerTask task, long delay, long period)
+		timer.schedule(new MyTask1("B"), 1800 , 300);   //沒有辦法改變頻率,如何改變?HW
 		timer.schedule(new MyStop(), 10*1000);
 		System.out.println("main");
 	}
