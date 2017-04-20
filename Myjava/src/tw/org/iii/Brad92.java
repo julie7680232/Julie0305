@@ -14,7 +14,7 @@ public class Brad92 {
 			e.printStackTrace();
 		}
 		System.out.println("OK");   
-		//return;   //想要印出OK就結束,但寫此列沒辦法,所以可以刪除
+		//return;   //想要印出OK就強制結束,但寫此列沒辦法,所以可以刪除
 
 	}
 
